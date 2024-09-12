@@ -17,4 +17,3 @@ I approach each day with passion and enthusiasm, always eager to learn, create, 
 ### You can find me on:
 - <a href="https://instagram.com/le.peanut_" target="_black">Instagram</a>
 - <a href="https://youtube.com/@lepeanutbutter" target="_black">Youtube</a>
-- <a href="https://x.com/ElPeanut_" target="_black">X</a>
