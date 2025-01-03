@@ -1,4 +1,4 @@
-![Banner](https://github.com/user-attachments/assets/8cf6c876-d619-4d39-b01c-c35bb3441117)
+![Banner](https://github.com/user-attachments/assets/fd616ff1-7ae4-4169-afd1-9379c7b1adf9)
 
 ### About Me:
 My journey into programming started during high school, when I needed to choose a project for a class. I noticed that the virtual assistant on my mother's company's website was poorly implemented, and I decided to fix it as my project. This experience sparked my passion for programming and problem-solving. Since then, I've continued to grow both in my technical skills and in my ability to work collaboratively within teams.
