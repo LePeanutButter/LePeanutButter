@@ -1,11 +1,9 @@
-<h1> Hi, I'm Santiago</h1>
-
 ![Banner](https://github.com/user-attachments/assets/8cf6c876-d619-4d39-b01c-c35bb3441117)
 
 ### About Me:
-I'm a Systems Engineer from the Escuela Colombiana de Ingeniería Julio Garavito.
-I love video games and going to the cinema to immerse myself in fascinating stories. Traveling is one of my passions, always seeking new adventures and cultures!
-I approach each day with passion and enthusiasm, always eager to learn, create, and collaborate .
+My journey into programming started during high school, when I needed to choose a project for a class. I noticed that the virtual assistant on my mother's company's website was poorly implemented, and I decided to fix it as my project. This experience sparked my passion for programming and problem-solving. Since then, I've continued to grow both in my technical skills and in my ability to work collaboratively within teams.
+
+In addition to my love for video games, digital art, fantasy movies and music, I am known for my commitment to delivering high-quality work on time. I excel at organizing teams, delegating tasks, and fostering collaboration through regular progress discussions. I take pride in helping teams achieve their best results while maintaining a strong focus on deadlines and quality.
 
 ### Languages and tools:
 ![Python](https://img.shields.io/badge/python-101012?style=for-the-badge&logo=python&logoColor=1D1D1F)
@@ -16,4 +14,4 @@ I approach each day with passion and enthusiasm, always eager to learn, create, 
 
 ### You can find me on:
 - <a href="https://instagram.com/le.peanut_" target="_black">Instagram</a>
-- <a href="https://youtube.com/@lepeanutbutter" target="_black">Youtube</a>
+- <a href="https://www.facebook.com/LePeanutButter/" target="_black">Facebook</a>
