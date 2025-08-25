@@ -42,10 +42,11 @@ Beyond my professional pursuits, I am deeply passionate about fitness training, 
 ![Figma](https://img.shields.io/badge/figma-101012?style=for-the-badge&logo=figma&logoColor=36363D)
 ![UML](https://img.shields.io/badge/uml-101012?style=for-the-badge&logo=uml&logoColor=36363D)
 
-
+## Competitive Programming & Front-End Challenges
+- [HackerRank](https://www.hackerrank.com/profile/lepeanut): Achieved 5-star ratings in Java, Problem Solving, SQL, Python, React, Functional Programming, C, and Artificial Intelligence. 
 
 ## Connect With Me:
-- <a href="https://www.linkedin.com/in/santiago-botero-86991335b/" target="_black">LinkedIn</a>
+- <a href="https://www.linkedin.com/in/santiago-botero-garcia-86991335b/" target="_black">LinkedIn</a>
 - <a href="https://instagram.com/le.peanut_" target="_black">Instagram</a>
 - <a href="https://www.facebook.com/LePeanutButter/" target="_black">Facebook</a>
 - <a href="https://github.com/LePeanutButter" target="_black">GitHub</a>
