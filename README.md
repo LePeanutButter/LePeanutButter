@@ -43,10 +43,15 @@ Beyond my professional pursuits, I am deeply passionate about fitness training, 
 ![UML](https://img.shields.io/badge/uml-101012?style=for-the-badge&logo=uml&logoColor=36363D)
 
 ## Competitive Programming & Front-End Challenges
-- [HackerRank](https://www.hackerrank.com/profile/lepeanut): Achieved 5-star ratings in Java, Problem Solving, SQL, Python, React, Functional Programming, C, and Artificial Intelligence. 
+Engaging in programming challenges is a key part of how I refine my technical and analytical skills. Through platforms like HackerRank, I consistently solve problems across a wide range of domains, ensuring a strong foundation in both algorithmic thinking and clean code practices.
+
+- Achieved 5-star ratings on [HackerRank](https://www.hackerrank.com/profile/lepeanut) in multiple domains, including Java, Problem Solving, SQL, Python, React, Functional Programming, C, and Artificial Intelligence. 
+
+These achievements reflect not only technical proficiency, but also my commitment to continuous improvement, attention to detail, and the ability to adapt problem-solving strategies to diverse challenges.
 
 ## Connect With Me:
-- <a href="https://www.linkedin.com/in/santiago-botero-garcia-86991335b/" target="_black">LinkedIn</a>
-- <a href="https://instagram.com/le.peanut_" target="_black">Instagram</a>
-- <a href="https://www.facebook.com/LePeanutButter/" target="_black">Facebook</a>
-- <a href="https://github.com/LePeanutButter" target="_black">GitHub</a>
+[![LinkedIn](https://img.shields.io/badge/linkedin-101012?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwLDAsMjU2LDI1NiIgd2lkdGg9IjUwcHgiIGhlaWdodD0iNTBweCIgZmlsbC1ydWxlPSJub256ZXJvIj48ZyBmaWxsPSIjMzYzNjNkIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48ZyB0cmFuc2Zvcm09InNjYWxlKDUuMTIsNS4xMikiPjxwYXRoIGQ9Ik00MSw0aC0zMmMtMi43NiwwIC01LDIuMjQgLTUsNXYzMmMwLDIuNzYgMi4yNCw1IDUsNWgzMmMyLjc2LDAgNSwtMi4yNCA1LC01di0zMmMwLC0yLjc2IC0yLjI0LC01IC01LC01ek0xNywyMHYxOWgtNnYtMTl6TTExLDE0LjQ3YzAsLTEuNCAxLjIsLTIuNDcgMywtMi40N2MxLjgsMCAyLjkzLDEuMDcgMywyLjQ3YzAsMS40IC0xLjEyLDIuNTMgLTMsMi41M2MtMS44LDAgLTMsLTEuMTMgLTMsLTIuNTN6TTM5LDM5aC02YzAsMCAwLC05LjI2IDAsLTEwYzAsLTIgLTEsLTQgLTMuNSwtNC4wNGgtMC4wOGMtMi40MiwwIC0zLjQyLDIuMDYgLTMuNDIsNC4wNGMwLDAuOTEgMCwxMCAwLDEwaC02di0xOWg2djIuNTZjMCwwIDEuOTMsLTIuNTYgNS44MSwtMi41NmMzLjk3LDAgNy4xOSwyLjczIDcuMTksOC4yNnoiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==)](https://www.linkedin.com/in/santiago-botero-garcia-86991335b/)
+[![Facebook](https://img.shields.io/badge/facebook-101012?style=for-the-badge&logo=facebook&logoColor=36363D)](https://www.facebook.com/LePeanutButter/)
+[![Instagram](https://img.shields.io/badge/instagram-101012?style=for-the-badge&logo=instagram&logoColor=36363D)](https://instagram.com/le.peanut_)
+[![GitHub](https://img.shields.io/badge/github-101012?style=for-the-badge&logo=github&logoColor=36363D)](https://github.com/LePeanutButter)
+
