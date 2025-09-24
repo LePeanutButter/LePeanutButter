@@ -45,7 +45,7 @@ Beyond my professional pursuits, I am deeply passionate about fitness training, 
 ## Competitive Programming & Front-End Challenges
 Engaging in programming challenges is a key part of how I refine my technical and analytical skills. Through platforms like HackerRank, I consistently solve problems across a wide range of domains, ensuring a strong foundation in both algorithmic thinking and clean code practices.
 
-- Achieved 5-star ratings on [HackerRank](https://www.hackerrank.com/profile/lepeanut) in multiple domains, including Java, Problem Solving, SQL, Python, React, Functional Programming, C, and Artificial Intelligence. 
+- Achieved 5-star ratings on [HackerRank](https://www.hackerrank.com/profile/lepeanut) in multiple domains, including Java, Problem Solving, SQL, Python, React, and C. 
 
 These achievements reflect not only technical proficiency, but also my commitment to continuous improvement, attention to detail, and the ability to adapt problem-solving strategies to diverse challenges.
 
