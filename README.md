@@ -2,15 +2,27 @@
 
 ## About Me:
 
-My passion for engineering began in high school when I transformed a challenge into an opportunity by enhancing a virtual assistant for my mothers's company website. Since then, I've combined my love for technology with strong leadership skills, managing teams and projects in multicultural environments. My proficiency in Agile methodologies (Scrum, DevOps) and fluency in English and German position me as an adaptable professional focused on delivering user-centered solutions.
+I’m a Systems Engineering student and full-stack technologist focused on building scalable, maintainable, and user-centered digital systems. I’m most motivated by the challenge of designing software that combines strong architecture, efficient engineering practices, and intuitive user experiences.
 
-Beyond my professional pursuits, I am deeply passionate about fitness training, exploring diverse cultures through travel, and immersing myself in music, literature, and art. These interests fuel my creativity and curiosity, which I bring into every aspect of my work and personal life.
+My experience spans full-stack development, cloud infrastructure, backend architecture, database design, automation, and AI-assisted systems. Over time, I’ve developed a particular interest in the intersection between software engineering, distributed systems, DevOps, and intelligent workflows.
+
+I work primarily with Java, Spring Boot, React, TypeScript, Python, PostgreSQL, MongoDB, Docker, AWS, and Azure, while also applying practices such as CI/CD, Infrastructure as Code, automated testing, security-oriented development, and Agile delivery methodologies. I’m comfortable working across layered architectures, REST APIs, authentication systems, cloud deployments, and modern frontend ecosystems.
+
+In addition to application development, I have experience with data modeling, workflow automation, semantic AI systems, DevSecOps pipelines, and software quality practices. My technical foundation also includes algorithms and data structures, low-level programming, networking, operating systems, and cybersecurity fundamentals, which continue to shape the way I approach system design and problem solving.
+
+I value environments where engineering decisions are intentional, collaboration is transparent, and technology is used to solve meaningful problems rather than simply shipping features quickly. I enjoy working closely with teams to translate complex requirements into systems that are resilient, scalable, and maintainable over time.
+
+Alongside technical work, I’ve supported peer learning and software evaluation processes in academic settings, helping improve implementation quality and reinforcing sound engineering practices.
 
 ## Professional Competencies
 
-- **Leadership & Project Management:** Expert in leading teams and planning projects through agile approaches.
-- **Problem Solving & UX/CX:** Skilled in applying data analysis and process modeling (e.g., UML) to develop innovative, user-focused solutions.
-- **Multicultural Communication:** Proven ability to manage international projects and teams with fluency in English and German.
+- **Agile Engineering Lifecycle & Delivery:** Practical experience orchestrating software development lifecycles via Scrum and Kanban inside Azure DevOps. Proven ability to coordinate version control, handle milestone tracking (epics, user stories, tasks), and manage cross-functional alignment in fast-paced, adaptive delivery environments.
+
+- **Architectural Modeling & User-Centered Design:** Skilled in translating complex business logic into resilient technical specifications using multi-level UML and C4 modeling (Levels 1–5). Balances technical rigor with strong UX/CX focus, ensuring backend architectures seamlessly power intuitive frontend components, microinteractions, and data visualizations.
+
+- **Hyperautomation & AI Workflow Orchestration:** Capable of designing and implementing advanced multi-agent systems and human-in-the-loop (HITL) workflows. Experienced in leveraging tools like n8n, semantic NLP matching, and LLMs to automate complex administrative and evaluation processes while embedding data privacy and ethical compliance frameworks.
+
+- **Global Communication & Technical Translation:** Equipped with a global mindset and full professional fluency across Spanish (Native), English (Certified C1), and German (Certified B1). Adept at working within international distributed teams, translating high-fidelity designs (Figma) into production-ready platforms, and delivering peer-level technical feedback.
 
 ## Technical Skills and Tools:
 
