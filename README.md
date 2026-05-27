@@ -91,6 +91,15 @@ Alongside technical work, I’ve supported peer learning and software evaluation
 ![Appian](https://img.shields.io/badge/appian-101012?style=for-the-badge&logo=appian&logoColor=36363D)
 ![n8n](https://img.shields.io/badge/n8n-101012?style=for-the-badge&logo=n8n&logoColor=36363D)
 
+## Live Portfolio & Production Showcase
+
+The components, workflows, and certifications outlined in this README are dynamically integrated into a unified, single-page production layout housed in my primary portfolio ecosystem.
+
+To explore the live implementation, interactive technical showcases, and deeper engineering case studies, please visit the main repository or the production site below:
+
+- Main Portfolio Repository: [LePeanutButter/portfolio-website](https://github.com/LePeanutButter/portfolio-website)
+- Production Site: [santiago.dev](https://lepeanutbutter.github.io/portfolio-website/)
+
 ## Competitive Programming
 
 Engaging in programming challenges is a key part of how I refine my technical and analytical skills. Through platforms like HackerRank, I consistently solve problems across a wide range of domains, ensuring a strong foundation in both algorithmic thinking and clean code practices.
