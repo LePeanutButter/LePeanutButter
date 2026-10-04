@@ -47,7 +47,7 @@ Experience building **workflow automation, data-driven processes, AI-enabled com
 
 My portfolio brings together selected projects, technical work, and professional experience in a unified environment.
 
-**Portfolio:** [santiago.dev](https://lepeanutbutter.github.io/portfolio-website/)
+**Portfolio:** [santiago.dev](https://lepeanutbutter.github.io/LePeanutButter/)
 
 ## Competitive Programming
 
