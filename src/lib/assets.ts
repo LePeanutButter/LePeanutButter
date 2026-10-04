@@ -1,5 +1,5 @@
 /** Base path for static export (must match next.config.ts). */
-export const BASE_PATH = "/portfolio-website";
+export const BASE_PATH = "/LePeanutButter";
 
 /** Resolve a public-folder asset path with the Next.js basePath prefix. */
 export function assetUrl(path: string): string {

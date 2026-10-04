@@ -17,7 +17,7 @@ export default function CTA() {
           Contact Me
         </a>
         <a
-          href="/portfolio-website/resumes/santiago-botero-resume.pdf"
+          href="/LePeanutButter/resumes/santiago-botero-resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="flex h-12 items-center justify-center rounded-control border border-border-subtle bg-transparent px-8 text-sm font-semibold text-ink transition-colors hover:bg-surface hover:text-ink hover:border-black/30 min-w-[180px]"
