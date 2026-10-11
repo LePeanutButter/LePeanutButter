@@ -1,11 +1,15 @@
+"use client";
+
 import { contactLinks } from "@/src/config/site";
+import { usePreferences } from "@/src/context/PreferencesContext";
 
 export default function Footer() {
+  const { t } = usePreferences();
   return (
     <footer id="contact" className="mt-24 border-t border-border-subtle py-16">
       <div className="mx-auto flex max-w-content flex-col gap-6 px-6 sm:px-8 md:flex-row md:items-center md:justify-between">
         <p className="text-sm text-ink-muted">
-          2026 Santiago Botero Garcia. Built with restrained systems thinking.
+          2026 Santiago Botero Garcia. {t("footer.built")}
         </p>
         <ul className="flex gap-8">
           {contactLinks.map((link) => (

@@ -1,12 +1,16 @@
+"use client";
+
 import SectionHeading from "@/src/components/ui/SectionHeading";
+import { usePreferences } from "@/src/context/PreferencesContext";
 
 export default function CTA() {
+  const { t } = usePreferences();
   return (
     <section className="mx-auto mt-12 flex max-w-content flex-col items-center border-t border-border-subtle px-6 py-24 text-center sm:px-8">
-      <SectionHeading eyebrow="What&apos;s Next?" title="Let&apos;s Work Together" />
+      <SectionHeading eyebrow={t("cta.eyebrow")} title={t("cta.title")} />
 
       <p className="mt-8 max-w-2xl text-base leading-8 text-ink-secondary">
-        I am currently open to new opportunities, freelance projects, and exciting collaborations. Whether you have a question or just want to say hi, my inbox is always open. Let&apos;s create something amazing together!
+        {t("cta.body")}
       </p>
 
       <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -14,7 +18,7 @@ export default function CTA() {
           href="https://www.linkedin.com/in/santiago-botero-garcia-86991335b/"
           className="flex h-12 min-w-[180px] items-center justify-center rounded-control bg-ink px-8 text-sm font-semibold capitalize text-canvas transition-opacity hover:opacity-90"
         >
-          Contact Me
+          {t("cta.contact")}
         </a>
       </div>
     </section>

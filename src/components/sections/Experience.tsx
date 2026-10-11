@@ -1,15 +1,19 @@
+"use client";
+
 import { experiences } from "@/src/data/portfolio";
 import Image from 'next/image';
+import { usePreferences } from "@/src/context/PreferencesContext";
 
 export default function Experience() {
+  const { t } = usePreferences();
   return (
     <section id="about" className="mx-auto max-w-content px-6 py-20 sm:px-8">
       <div className="mb-16 text-center md:text-left">
         <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">
-          Professional timeline
+          {t("experience.eyebrow")}
         </span>
         <h2 className="mt-3 text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
-          Experience
+          {t("experience.title")}
         </h2>
       </div>
 
@@ -72,7 +76,7 @@ export default function Experience() {
 
               <div className="mt-6">
                 <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-ink-muted">
-                  Key Achievements
+                  {t("experience.achievements")}
                 </h4>
                 <ul className="grid gap-3 text-sm text-ink-secondary sm:grid-cols-2">
                   {experience.highlights.map((highlight) => (

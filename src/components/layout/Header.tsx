@@ -1,12 +1,19 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { navigationItems, siteConfig } from "@/src/config/site";
+import { siteConfig } from "@/src/config/site";
+import { usePreferences } from "@/src/context/PreferencesContext";
 import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const { t } = usePreferences();
+  const navigationItems = [
+    { label: t("nav.projects"), href: "#projects" },
+    { label: t("nav.about"), href: "#about" },
+    { label: t("nav.contact"), href: "#contact" },
+  ];
 
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -23,7 +30,7 @@ export default function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border-subtle bg-[rgba(245,245,247,0.7)] backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border-subtle bg-surface/70 backdrop-blur-xl">
       <nav className="mx-auto flex h-20 max-w-content items-center justify-between px-6 sm:px-8">
         <Link
           className="font-sans text-base font-extrabold tracking-[-0.04em] text-ink transition-opacity duration-500 ease-premium hover:opacity-60"
@@ -48,7 +55,7 @@ export default function Header() {
           type="button"
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
-          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={isMenuOpen ? t("nav.close") : t("nav.open")}
           onClick={() => setIsMenuOpen((open) => !open)}
           className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-border-subtle text-xl text-ink transition-colors hover:bg-black/5 md:hidden"
         >

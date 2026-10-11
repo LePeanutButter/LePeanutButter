@@ -1,15 +1,19 @@
+"use client";
+
 import { education } from "@/src/data/portfolio";
 import Image from 'next/image';
+import { usePreferences } from "@/src/context/PreferencesContext";
 
 export default function Education() {
+  const { t } = usePreferences();
   return (
     <section className="mx-auto max-w-content px-6 py-20 sm:px-8">
       <div className="mb-16 text-center md:text-left">
         <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">
-          Academic base
+          {t("education.eyebrow")}
         </span>
         <h2 className="mt-3 text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
-          Education
+          {t("education.title")}
         </h2>
       </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import type { ProjectCategory } from "@/src/types";
+import { usePreferences } from "@/src/context/PreferencesContext";
 
 export type FilterCategory = "all" | ProjectCategory;
 
@@ -11,11 +12,12 @@ interface ProjectTabsProps {
 
 export default function ProjectTabs({ activeCategory, onTabChange }: ProjectTabsProps) {
   const tabs: FilterCategory[] = ["all", "academic", "personal"];
+  const { t } = usePreferences();
 
   return (
     <div
       role="group"
-      aria-label="Filter projects by category"
+      aria-label={t("projects.filter")}
       className="flex w-fit rounded-full border border-border-subtle bg-white/70 p-1 shadow-premium backdrop-blur-sm"
     >
       {tabs.map((tab) => (
@@ -30,7 +32,7 @@ export default function ProjectTabs({ activeCategory, onTabChange }: ProjectTabs
           }
           aria-pressed={activeCategory === tab}
         >
-          {tab}
+          {t(`projects.${tab}`)}
         </button>
       ))}
     </div>
