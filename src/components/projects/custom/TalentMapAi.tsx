@@ -70,7 +70,17 @@ export default function TalentMapAi({ project }: ProjectViewProps) {
                   It showcases how candidate CVs are processed and matched with job descriptions using semantic similarity, as well as the system&apos;s architecture and design structure behind the implementation.
                 </p>
                 <div className="mt-4 aspect-video overflow-hidden rounded-card border border-border-subtle bg-ink">
-                  <video controls className="h-full w-full" src={mediaUrl("talent-map-ai", "showcase.webm")} />
+                  <video
+                    controls
+                    preload="metadata"
+                    aria-label="TalentMap AI live demo and architecture overview"
+                    className="h-full w-full"
+                    src={mediaUrl("talent-map-ai", "showcase.webm")}
+                  >
+                    <p className="p-4 text-sm text-canvas">
+                      Video unavailable. The section above describes the live demo, semantic matching flow, and system architecture.
+                    </p>
+                  </video>
                 </div>
               </section>
 

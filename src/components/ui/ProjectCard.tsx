@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { ProjectCase } from "@/src/types";
+import { assetUrl } from "@/src/lib/assets";
 
 interface ProjectCardProps {
   project: ProjectCase;
@@ -18,7 +19,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
   const previewSrc = project.thumbnail
     ? project.thumbnail
-      : `https://placehold.co/800x550/e5e7eb/6b7280?text=${encodeURIComponent(project.title)}`;
+      : assetUrl("/file.svg");
 
   return (
     <Link
@@ -63,7 +64,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {project.dateRange}
           </p>
         ) : null}
-        <p className="mt-4 text-sm leading-6 text-ink-secondary line-clamp-3">
+        <p className="mt-4 line-clamp-3 text-sm leading-6 text-ink-secondary">
           {project.summary}
         </p>
         <div className="mt-auto flex flex-wrap gap-2 pt-6">

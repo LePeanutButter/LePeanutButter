@@ -2,10 +2,10 @@
 
 import { useEffect } from "react";
 
-const QIFY_THEME = "qify";
+type QifyTheme = "qify";
 
 interface ProjectSiteThemeProps {
-  theme: typeof QIFY_THEME;
+  theme: QifyTheme;
 }
 
 /** Applies a document-level theme override (Qify only). Cleans up on unmount. */

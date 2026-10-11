@@ -2,6 +2,8 @@ import crehanaLogo from '@logos/crehana.webp';
 import oxfordLogo from '@logos/oxford-placement.webp';
 import toeflLogo from '@logos/toefl-junior.webp';
 import sprachLogo from '@logos/sprach-institut.webp';
+import andesLogo from '@logos/andes.webp';
+import santanderLogo from '@logos/santander.webp';
 import eciLogo from '@logos/eci.webp';
 import orbidiLogo from '@logos/orbidi.webp';
 import { AssetRegistry, RegistryEntry } from './genericRegistry';
@@ -14,6 +16,8 @@ export enum CompanyId {
   OXFORD = 'oxford',
   TOEFL = 'toefl',
   SPRACH = 'sprach',
+  ANDES = 'andes',
+  SANTANDER = 'santander',
   ECI = 'eci',
   ORBIDI = 'orbidi',
 }
@@ -39,6 +43,14 @@ export const CompanyRegistry = {
   [CompanyId.SPRACH]: {
     name: 'Sprach Institut',
     logo: sprachLogo,
+  },
+  [CompanyId.ANDES]: {
+    name: 'Universidad de los Andes',
+    logo: andesLogo,
+  },
+  [CompanyId.SANTANDER]: {
+    name: 'Santander Open Academy',
+    logo: santanderLogo,
   },
   [CompanyId.ECI]: {
     name: 'Escuela Colombiana de Ingenieria Julio Garavito',

@@ -50,7 +50,6 @@ export default function CodeCard({ filename }: CodeCardProps) {
           <span className="font-semibold text-syntax-keyword">export</span>{" "}
           <span className="font-semibold text-syntax-keyword">default</span>{" "}
           <span className="text-syntax-property">developer</span>;
-          <span className="ml-1 inline-block h-4 w-2 animate-blink bg-ink align-middle" />
         </code>
       </pre>
     </div>

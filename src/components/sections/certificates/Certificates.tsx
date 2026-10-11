@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 import SectionHeading from "@/src/components/ui/SectionHeading";
 import { certificates } from "@/src/data/portfolio";
 import CertificateCard from "./CertificateCard";
@@ -51,10 +51,10 @@ export default function Certificates() {
     : filteredAndSortedCertificates.slice(0, INITIAL_CERTIFICATE_LIMIT);
   const hiddenCount = filteredAndSortedCertificates.length - INITIAL_CERTIFICATE_LIMIT;
 
-  // Reset expansion when category changes
-  useEffect(() => {
+  const handleCategoryChange = (tab: string) => {
+    setActiveCategory(tab);
     setIsExpanded(false);
-  }, [activeCategory]);
+  };
 
   return (
     <section id="certificates" className="mx-auto max-w-content px-6 py-20 sm:px-8">
@@ -62,17 +62,19 @@ export default function Certificates() {
         <SectionHeading eyebrow="Continuous Learning" title="Certifications" />
 
         <div
-          aria-label="Certificate category tabs"
+          role="group"
+          aria-label="Filter certificates by category"
           className="flex w-fit max-w-full overflow-x-auto rounded-control border border-border-subtle bg-surface p-1 shadow-premium no-scrollbar"
         >
           {categories.map((tab) => (
             <button
               key={tab}
-              onClick={() => setActiveCategory(tab)}
+              type="button"
+              onClick={() => handleCategoryChange(tab)}
               className={
                 activeCategory === tab
-                  ? "whitespace-nowrap rounded-[6px] bg-ink px-4 py-2 text-sm font-medium capitalize text-canvas"
-                  : "whitespace-nowrap px-4 py-2 text-sm font-medium capitalize text-ink-secondary hover:text-ink transition-colors"
+                  ? "min-h-11 whitespace-nowrap rounded-[6px] bg-ink px-4 py-2 text-sm font-medium capitalize text-canvas"
+                  : "min-h-11 whitespace-nowrap px-4 py-2 text-sm font-medium capitalize text-ink-secondary hover:text-ink transition-colors"
               }
               aria-pressed={activeCategory === tab}
             >
@@ -82,7 +84,7 @@ export default function Certificates() {
         </div>
       </div>
 
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:gap-8">
+      <div id="certificate-list" className="mt-12 grid gap-6 sm:grid-cols-2 lg:gap-8">
         {visibleCertificates.map((cert) => (
           <CertificateCard
             key={cert.id}
@@ -95,9 +97,11 @@ export default function Certificates() {
       {hasMoreCertificates && (
         <div className="mt-10 flex justify-center">
           <button
-            className="flex items-center gap-2 rounded-full border border-border-subtle bg-transparent px-6 py-3 text-sm font-semibold text-ink-secondary transition-all duration-500 ease-premium hover:border-black/30 hover:bg-black/[0.01] hover:text-ink"
+            className="flex min-h-11 items-center gap-2 rounded-full border border-border-subtle bg-transparent px-6 py-3 text-sm font-semibold text-ink-secondary transition-all duration-500 ease-premium hover:border-black/30 hover:bg-black/[0.01] hover:text-ink"
             onClick={() => setIsExpanded((prev) => !prev)}
             type="button"
+            aria-expanded={isExpanded}
+            aria-controls="certificate-list"
           >
             <span>
               {isExpanded

@@ -29,7 +29,7 @@ export default function VideoSelector({
             key={demo.id}
             type="button"
             onClick={() => setActiveId(demo.id)}
-            className={`flex items-center gap-3 rounded-control border px-4 py-3 text-left text-sm font-semibold transition duration-500 ease-premium ${
+            className={`flex min-h-11 items-center gap-3 rounded-control border px-4 py-3 text-left text-sm font-semibold transition duration-500 ease-premium ${
               activeId === demo.id
                 ? activeAccentClass
                 : "border-border-subtle bg-canvas text-ink-secondary hover:border-[#007bff] hover:text-[#007bff]"
@@ -42,14 +42,24 @@ export default function VideoSelector({
       </div>
       <div className="flex aspect-video flex-col items-center justify-center overflow-hidden rounded-card border border-border-subtle bg-ink">
         {active?.src ? (
-          <video
-            key={active.src}
-            controls
-            poster={active.poster ? mediaUrl(active.poster) : undefined}
-            className="h-full w-full object-contain"
-          >
-            <source src={mediaUrl(active.src)} type={active.mimeType ?? "video/mp4"} />
-          </video>
+          <>
+            <video
+              key={active.src}
+              controls
+              preload="metadata"
+              aria-label={active.title}
+              poster={active.poster ? mediaUrl(active.poster) : undefined}
+              className="h-full w-full object-contain"
+            >
+              <source src={mediaUrl(active.src)} type={active.mimeType ?? "video/mp4"} />
+              <p className="p-4 text-sm text-canvas">
+                Video unavailable. {active.description ?? active.title}
+              </p>
+            </video>
+            {active.description ? (
+              <p className="sr-only">{active.description}</p>
+            ) : null}
+          </>
         ) : (
           <div className="px-6 text-center text-canvas">
             <p className="text-4xl opacity-80">▶</p>

@@ -121,8 +121,9 @@ const onPointerDown = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
               <div key={item.title} className="w-[300px] shrink-0 snap-center overflow-hidden rounded-card border border-border-subtle bg-surface shadow-premium">
                 <div className="aspect-video bg-canvas">
                   {item.kind === "video" ? (
-                    <video controls poster={mediaUrl("poob-vs-zombies", item.poster)} className="h-full w-full object-cover">
+                    <video controls preload="metadata" aria-label={item.title} poster={mediaUrl("poob-vs-zombies", item.poster)} className="h-full w-full object-cover">
                       <source src={mediaUrl("poob-vs-zombies", item.src)} type="video/mp4" />
+                      <p className="p-4 text-sm text-canvas">{item.desc}</p>
                     </video>
                   ) : (
                     <Image src={mediaUrl("poob-vs-zombies", item.src)} alt={item.title} width={400} height={225} className="h-full w-full object-cover" unoptimized draggable={false} />

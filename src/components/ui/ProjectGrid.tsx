@@ -48,7 +48,7 @@ export default function ProjectGrid({
           {projects.length} items
         </span>
       </div>
-      <div className="mt-6 grid gap-6 lg:grid-cols-3">
+      <div id={`${title.toLowerCase().replace(/\s+/g, "-")}-project-list`} className="mt-6 grid gap-6 lg:grid-cols-3">
         {visibleProjects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
@@ -56,12 +56,14 @@ export default function ProjectGrid({
       {hasMoreProjects ? (
         <div className="mt-10 flex justify-center">
           <button
-            className="flex items-center gap-2 rounded-full border border-border-subtle bg-transparent px-6 py-3 text-sm font-semibold text-ink-secondary transition-all duration-500 ease-premium hover:border-black/30 hover:bg-black/[0.01] hover:text-ink"
+            className="flex min-h-11 items-center gap-2 rounded-full border border-border-subtle bg-transparent px-6 py-3 text-sm font-semibold text-ink-secondary transition-all duration-500 ease-premium hover:border-black/30 hover:bg-black/[0.01] hover:text-ink"
             onClick={() => setIsExpanded((currentState) => !currentState)}
             type="button"
+            aria-expanded={isExpanded}
+            aria-controls={`${title.toLowerCase().replace(/\s+/g, "-")}-project-list`}
           >
             <span>
-              {isExpanded ? "Show fewer" : `Show ${hiddenCount} more`}
+              {isExpanded ? `Show fewer ${title.toLowerCase()}` : `Show ${hiddenCount} more ${title.toLowerCase()}`}
             </span>
             <span aria-hidden="true">{isExpanded ? "^" : "v"}</span>
           </button>

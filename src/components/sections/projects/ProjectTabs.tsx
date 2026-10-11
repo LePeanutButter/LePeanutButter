@@ -14,17 +14,19 @@ export default function ProjectTabs({ activeCategory, onTabChange }: ProjectTabs
 
   return (
     <div
-      aria-label="Project category tabs"
-      className="flex w-fit rounded-control border border-border-subtle bg-surface p-1 shadow-premium"
+      role="group"
+      aria-label="Filter projects by category"
+      className="flex w-fit rounded-full border border-border-subtle bg-white/70 p-1 shadow-premium backdrop-blur-sm"
     >
       {tabs.map((tab) => (
         <button
           key={tab}
+          type="button"
           onClick={() => onTabChange(tab)}
           className={
             activeCategory === tab
-              ? "rounded-[6px] bg-ink px-4 py-2 text-sm font-medium capitalize text-canvas"
-              : "px-4 py-2 text-sm font-medium capitalize text-ink-secondary hover:text-ink transition-colors"
+              ? "min-h-11 rounded-full bg-ink px-4 py-2 text-sm font-medium capitalize text-canvas"
+              : "min-h-11 px-4 py-2 text-sm font-medium capitalize text-ink-secondary transition-colors hover:text-ink"
           }
           aria-pressed={activeCategory === tab}
         >
