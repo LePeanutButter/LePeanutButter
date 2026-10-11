@@ -78,7 +78,7 @@ function ActivityBar() {
 
 export default function CodeCard({ filename = "main.tf" }: CodeCardProps) {
   return (
-    <div className="overflow-hidden rounded-2xl border border-[#c9c9c9] bg-[#f3f3f3] text-[#1f1f1f] shadow-2xl transition-transform duration-500 ease-premium hover:-translate-y-1">
+    <div className="code-card overflow-hidden rounded-2xl border border-[#c9c9c9] bg-[#f3f3f3] text-[#1f1f1f] shadow-2xl transition-transform duration-500 ease-premium hover:-translate-y-1">
       <div className="flex h-12 items-center border-b border-[#d4d4d4] bg-[#e8e8e8] px-4">
         <div className="flex gap-2" aria-hidden="true">
           <span className="size-3 rounded-full bg-[#ff5f57]" />
@@ -166,19 +166,19 @@ export default function CodeCard({ filename = "main.tf" }: CodeCardProps) {
                     <span className="whitespace-pre">
                       {line.length === 5 ? (
                         <>
-                          <span className="text-[#0000ff]">{line[0]}</span>
-                          <span className="text-[#a31515]">&quot;{line[1]}&quot;</span>
-                          <span className="text-[#333]">{line[2]}</span>
-                          <span className="text-[#a31515]">&quot;{line[3]}&quot;</span>
-                          <span className="text-[#333]">{line[4]}</span>
+                          <span className="code-syntax-keyword">{line[0]}</span>
+                          <span className="code-syntax-string">&quot;{line[1]}&quot;</span>
+                          <span className="code-syntax-plain">{line[2]}</span>
+                          <span className="code-syntax-string">&quot;{line[3]}&quot;</span>
+                          <span className="code-syntax-plain">{line[4]}</span>
                         </>
                       ) : line[0]?.trim().endsWith("=") ? (
                         <>
-                          <span className="text-[#001080]">{line[0].slice(0, line[0].indexOf("=") + 1)}</span>
-                          <span className="text-[#a31515]">{line[1]}</span>
+                          <span className="code-syntax-property">{line[0].slice(0, line[0].indexOf("=") + 1)}</span>
+                          <span className="code-syntax-string">{line[1]}</span>
                         </>
                       ) : (
-                        <span className={line[0]?.includes('"') ? "text-[#a31515]" : "text-[#333]"}>{line[0]}</span>
+                        <span className={line[0]?.includes('"') ? "code-syntax-string" : "code-syntax-plain"}>{line[0]}</span>
                       )}
                     </span>
                   </span>

@@ -6,6 +6,7 @@ import { certificates } from "@/src/data/portfolio";
 import CertificateCard from "./CertificateCard";
 import CertificateModal from "./CertificateModal";
 import type { Certificate } from "@/src/types";
+import SegmentedFilter from "@/src/components/ui/SegmentedFilter";
 
 const INITIAL_CERTIFICATE_LIMIT = 6;
 
@@ -61,30 +62,18 @@ export default function Certificates() {
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <SectionHeading eyebrow="Continuous Learning" title="Certifications" />
 
-        <div
-          role="group"
-          aria-label="Filter certificates by category"
-          className="flex w-fit max-w-full overflow-x-auto rounded-control border border-border-subtle bg-surface p-1 shadow-premium no-scrollbar"
-        >
-          {categories.map((tab) => (
-            <button
-              key={tab}
-              type="button"
-              onClick={() => handleCategoryChange(tab)}
-              className={
-                activeCategory === tab
-                  ? "min-h-11 whitespace-nowrap rounded-[6px] bg-ink px-4 py-2 text-sm font-medium capitalize text-canvas"
-                  : "min-h-11 whitespace-nowrap px-4 py-2 text-sm font-medium capitalize text-ink-secondary hover:text-ink transition-colors"
-              }
-              aria-pressed={activeCategory === tab}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
+        <SegmentedFilter
+          ariaLabel="Filter certificates by category"
+          options={categories.map((tab) => ({
+            value: tab,
+            label: tab === "all" ? "All" : tab,
+          }))}
+          value={activeCategory}
+          onChange={handleCategoryChange}
+        />
       </div>
 
-      <div id="certificate-list" className="mt-12 grid gap-6 sm:grid-cols-2 lg:gap-8">
+      <div key={activeCategory} id="certificate-list" className="filter-content-enter mt-12 grid gap-6 sm:grid-cols-2 lg:gap-8">
         {visibleCertificates.map((cert) => (
           <CertificateCard
             key={cert.id}

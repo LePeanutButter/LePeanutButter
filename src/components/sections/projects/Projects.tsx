@@ -17,7 +17,7 @@ export default function Projects() {
         <SectionHeading eyebrow={t("projects.eyebrow")} title={t("projects.title")} />
         <ProjectTabs activeCategory={activeCategory} onTabChange={setActiveCategory} />
       </div>
-      <div className="mt-12 grid gap-14">
+      <div key={activeCategory} className="filter-content-enter mt-12 grid gap-14">
         {(activeCategory === "all" || activeCategory === "academic") && <AcademicProjects />}
         {(activeCategory === "all" || activeCategory === "personal") && <PersonalProjects />}
       </div>
