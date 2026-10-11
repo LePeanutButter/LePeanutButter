@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { ProjectCase } from "@/src/types";
+import { assetUrl } from "@/src/lib/assets";
 
 interface ProjectCardProps {
   project: ProjectCase;
@@ -18,21 +19,22 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
   const previewSrc = project.thumbnail
     ? project.thumbnail
-      : `https://placehold.co/800x550/e5e7eb/6b7280?text=${encodeURIComponent(project.title)}`;
+      : assetUrl("/file.svg");
 
   return (
     <Link
-      className="group flex min-h-[360px] flex-col overflow-hidden rounded-[20px] border border-border-subtle bg-surface text-inherit no-underline shadow-premium transition-all duration-500 ease-premium hover:-translate-y-1 hover:border-black/15 hover:shadow-premium-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+      className="group flex min-h-[360px] flex-col overflow-hidden rounded-[20px] border border-border-subtle bg-surface text-inherit no-underline shadow-premium transition-[transform,box-shadow,border-color] duration-700 ease-apple hover:-translate-y-2 hover:border-black/15 hover:shadow-premium-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
       href={`/projects/${project.slug}`}
     >
       <div className="relative aspect-[16/11] w-full overflow-hidden border-b border-border-subtle bg-canvas">
         <Image
           src={previewSrc}
           alt={`${project.title} preview`}
-          className="h-full w-full object-cover transition-transform duration-500 ease-premium group-hover:scale-105"
+          className="h-full w-full object-cover transition-[transform,filter] duration-700 ease-apple group-hover:scale-[1.035] group-hover:brightness-[1.04]"
           fill
           unoptimized={!project.thumbnail}
         />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 transition-opacity duration-700 ease-apple group-hover:opacity-100" />
       </div>
 
       <div className="flex flex-col flex-grow p-6 sm:p-7">
@@ -63,7 +65,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {project.dateRange}
           </p>
         ) : null}
-        <p className="mt-4 text-sm leading-6 text-ink-secondary line-clamp-3">
+        <p className="mt-4 line-clamp-3 text-sm leading-6 text-ink-secondary">
           {project.summary}
         </p>
         <div className="mt-auto flex flex-wrap gap-2 pt-6">

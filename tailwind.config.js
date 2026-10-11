@@ -7,12 +7,12 @@ const config = {
   theme: {
     extend: {
       colors: {
-        canvas: "#fafafa",
-        surface: "#ffffff",
-        ink: "#000000",
-        "ink-secondary": "#666666",
-        "ink-muted": "#888888",
-        "border-subtle": "rgba(0, 0, 0, 0.08)",
+        canvas: "var(--canvas)",
+        surface: "var(--surface)",
+        ink: "var(--ink)",
+        "ink-secondary": "var(--ink-secondary)",
+        "ink-muted": "var(--ink-muted)",
+        "border-subtle": "var(--border-subtle)",
         success: "#00cc66",
         syntax: {
           keyword: "#0000ff",
@@ -55,6 +55,13 @@ const config = {
       },
       transitionTimingFunction: {
         premium: "cubic-bezier(0.16, 1, 0.3, 1)",
+        apple: "cubic-bezier(0.25, 1, 0.5, 1)",
+        "apple-emphasized": "cubic-bezier(0.16, 1, 0.3, 1)",
+      },
+      transitionDuration: {
+        220: "220ms",
+        420: "420ms",
+        700: "700ms",
       },
       keyframes: {
         "fade-in-up": {

@@ -5,13 +5,13 @@ interface SectionHeadingProps {
 
 export default function SectionHeading({ eyebrow, title }: SectionHeadingProps) {
   return (
-    <div>
+    <div className="section-heading">
       {eyebrow ? (
         <p className="font-mono text-xs uppercase tracking-[0.14em] text-ink-muted">
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="mt-3 text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
+      <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl">
         {title}
       </h2>
     </div>

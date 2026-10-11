@@ -48,7 +48,7 @@ export default function ProjectRepositoriesBlock({
                 </div>
                 <GitHubIcon className="h-5 w-5 shrink-0 text-ink-muted group-hover:text-ink" />
               </div>
-              <p className={`mt-3 line-clamp-2 ${projectUi.body}`}>{module.summary}</p>
+              <p className={`mt-3 ${projectUi.body}`}>{module.summary}</p>
               <p className="mt-3 font-mono text-[11px] text-ink-muted">
                 {repoLabel(module.repositoryUrl)} →
               </p>

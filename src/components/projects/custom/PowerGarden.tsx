@@ -115,9 +115,10 @@ export default function PowerGarden({ project }: ProjectViewProps) {
                   controls
                   loop
                   preload="metadata"
+                  aria-label="Power Garden gameplay demonstration"
                   className="w-full h-auto object-cover aspect-video block"
                 >
-                  Tu navegador no soporta la reproducción de videos.
+                  Tu navegador no soporta la reproducción de videos. Consulta la descripción del proyecto para conocer sus características.
                 </video>
               </div>
               
@@ -147,7 +148,7 @@ export default function PowerGarden({ project }: ProjectViewProps) {
           <div className="mt-4 flex flex-col gap-6 sm:flex-row sm:items-stretch">
             <div className="relative w-32 min-h-[200px] sm:h-auto flex-shrink-0 mx-auto sm:mx-0 overflow-hidden rounded-md">
               <Image 
-                src={mediaUrl("power-garden", "apple.png")} 
+                src={mediaUrl("power-garden", "apple.webp")} 
                 alt="Apple" 
                 fill
                 className="absolute inset-0 w-full h-full object-contain"

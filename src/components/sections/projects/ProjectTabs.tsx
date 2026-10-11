@@ -1,6 +1,8 @@
 "use client";
 
 import type { ProjectCategory } from "@/src/types";
+import { usePreferences } from "@/src/context/PreferencesContext";
+import SegmentedFilter from "@/src/components/ui/SegmentedFilter";
 
 export type FilterCategory = "all" | ProjectCategory;
 
@@ -11,26 +13,14 @@ interface ProjectTabsProps {
 
 export default function ProjectTabs({ activeCategory, onTabChange }: ProjectTabsProps) {
   const tabs: FilterCategory[] = ["all", "academic", "personal"];
+  const { t } = usePreferences();
 
   return (
-    <div
-      aria-label="Project category tabs"
-      className="flex w-fit rounded-control border border-border-subtle bg-surface p-1 shadow-premium"
-    >
-      {tabs.map((tab) => (
-        <button
-          key={tab}
-          onClick={() => onTabChange(tab)}
-          className={
-            activeCategory === tab
-              ? "rounded-[6px] bg-ink px-4 py-2 text-sm font-medium capitalize text-canvas"
-              : "px-4 py-2 text-sm font-medium capitalize text-ink-secondary hover:text-ink transition-colors"
-          }
-          aria-pressed={activeCategory === tab}
-        >
-          {tab}
-        </button>
-      ))}
-    </div>
+    <SegmentedFilter
+      ariaLabel={t("projects.filter")}
+      options={tabs.map((tab) => ({ value: tab, label: t(`projects.${tab}`) }))}
+      value={activeCategory}
+      onChange={(value) => onTabChange(value as FilterCategory)}
+    />
   );
 }

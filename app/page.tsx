@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <PageShell>
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         <TechnicalShowcase />
         <Projects />

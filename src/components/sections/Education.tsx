@@ -1,15 +1,19 @@
+"use client";
+
 import { education } from "@/src/data/portfolio";
 import Image from 'next/image';
+import { usePreferences } from "@/src/context/PreferencesContext";
 
 export default function Education() {
+  const { t } = usePreferences();
   return (
     <section className="mx-auto max-w-content px-6 py-20 sm:px-8">
       <div className="mb-16 text-center md:text-left">
         <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">
-          Academic base
+          {t("education.eyebrow")}
         </span>
         <h2 className="mt-3 text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
-          Education
+          {t("education.title")}
         </h2>
       </div>
 
@@ -30,13 +34,19 @@ export default function Education() {
             <div className="rounded-card border border-border-subtle bg-surface p-6 shadow-premium transition-all duration-500 ease-premium group-hover:-translate-y-1 group-hover:shadow-premium-hover md:p-8">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div className="flex items-center gap-4">
-                  <Image
-                    src={ item.logoUrl|| `https://placehold.co/100x100/e5e7eb/6b7280?text=${encodeURIComponent(item.institution.charAt(0))}`}
-                    alt={`${item.institution} logo`}
-                    className="size-12 rounded bg-canvas object-fill shrink-0"
-                    width={48}
-                    height={48}
-                  />
+                  {item.logoUrl ? (
+                    <Image
+                      src={item.logoUrl}
+                      alt={`${item.institution} logo`}
+                      className="size-12 shrink-0 rounded bg-canvas object-contain"
+                      width={48}
+                      height={48}
+                    />
+                  ) : (
+                    <span aria-hidden="true" className="flex size-12 shrink-0 items-center justify-center rounded bg-canvas text-lg font-semibold text-ink">
+                      {item.institution.charAt(0)}
+                    </span>
+                  )}
                   <div>
                     <h3 className="text-xl font-semibold leading-7 text-ink transition-opacity duration-500 ease-premium group-hover:opacity-70">
                       {item.degree}

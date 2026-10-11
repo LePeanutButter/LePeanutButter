@@ -75,8 +75,9 @@ export default function Prometeo({ project }: ProjectViewProps) {
           <div className="mt-6 grid gap-6 md:grid-cols-3">
             {videos.map((v) => (
               <div key={v.title} className="overflow-hidden rounded-card border border-border-subtle bg-surface shadow-premium">
-                <video controls poster={mediaUrl("prometeo", v.poster)} className="aspect-video w-full bg-ink object-cover">
+                <video controls preload="metadata" aria-label={v.title} poster={mediaUrl("prometeo", v.poster)} className="aspect-video w-full bg-ink object-cover">
                   <source src={mediaUrl("prometeo", v.src)} type="video/mp4" />
+                  <p className="p-4 text-sm text-canvas">{v.desc}</p>
                 </video>
                 <div className="p-4">
                   <h4 className="font-bold text-ink">{v.title}</h4>

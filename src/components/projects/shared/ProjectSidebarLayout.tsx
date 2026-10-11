@@ -38,7 +38,10 @@ export default function ProjectSidebarLayout({
     return () => observer.disconnect();
   }, [navItems]);
 
-  let lastGroup: string | undefined;
+  const navItemsWithGroupState = navItems.map((item, index) => ({
+    ...item,
+    showGroup: Boolean(item.group && item.group !== navItems[index - 1]?.group),
+  }));
 
   return (
     <div className="flex min-h-[50vh] flex-col lg:flex-row">
@@ -46,13 +49,11 @@ export default function ProjectSidebarLayout({
         <div className="p-6">{brand}</div>
         <nav className="px-3 pb-6">
           <ul className="space-y-1">
-            {navItems.map((item) => {
-              const showGroup = item.group && item.group !== lastGroup;
-              if (item.group) lastGroup = item.group;
+            {navItemsWithGroupState.map((item) => {
               const isActive = activeId === item.id;
               return (
                 <li key={item.id}>
-                  {showGroup ? (
+                  {item.showGroup ? (
                     <p className={projectUi.sectionEyebrow + " px-3 pb-1 pt-4"}>
                       {item.group}
                     </p>

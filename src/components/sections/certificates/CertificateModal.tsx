@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+"use client";
+
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { Certificate } from "@/src/types";
-import Image from 'next/image';
+import Image from "next/image";
 
 interface CertificateModalProps {
   certificate: Certificate;
@@ -11,61 +13,108 @@ export default function CertificateModal({
   certificate,
   onClose,
 }: CertificateModalProps) {
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isClosingRef = useRef(false);
   const [isClosing, setIsClosing] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+
+  const requestClose = useCallback(() => {
+    if (isClosingRef.current) return;
+    isClosingRef.current = true;
+    setIsClosing(true);
+    closeTimeoutRef.current = setTimeout(onClose, 180);
+  }, [onClose]);
 
   useEffect(() => {
-    // Small delay to ensure the browser paints the initial state before applying the open classes
-    const raf = requestAnimationFrame(() => setIsMounted(true));
-    return () => cancelAnimationFrame(raf);
-  }, []);
+    const previousActiveElement = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    const previousPaddingRight = document.body.style.paddingRight;
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.overflow = "hidden";
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
+    closeButtonRef.current?.focus();
 
-  const handleClose = () => {
-    setIsClosing(true);
-    setTimeout(() => {
-      onClose();
-    }, 150); // 150ms extremely snappy
-  };
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        requestClose();
+        return;
+      }
 
-  const backdropBase = "absolute inset-0 bg-ink/40 backdrop-blur-sm transition-opacity duration-150 ease-out";
-  const backdropState = isMounted && !isClosing ? "opacity-100" : "opacity-0";
+      if (event.key !== "Tab" || !dialogRef.current) return;
+      const focusable = Array.from(
+        dialogRef.current.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
+      );
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
 
-  const dialogBase = "relative z-10 w-full max-w-2xl overflow-hidden rounded-2xl bg-surface shadow-2xl transition-all duration-150 ease-out transform";
-  const dialogState = isMounted && !isClosing ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-2";
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.body.style.paddingRight = previousPaddingRight;
+      document.removeEventListener("keydown", handleKeyDown);
+      previousActiveElement?.focus();
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, [requestClose]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 pb-20 sm:pb-6">
-      {/* Backdrop */}
-      <div 
-        className={`${backdropBase} ${backdropState}`}
-        onClick={handleClose}
-        aria-hidden="true"
-      />
-      
-      {/* Modal Dialog */}
-      <div className={`${dialogBase} ${dialogState}`}>
+    <div
+      className={`certificate-modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 ${
+        isClosing ? "certificate-modal-backdrop-closing" : ""
+      }`}
+      onClick={requestClose}
+    >
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="certificate-dialog-title"
+        className={`certificate-modal-dialog relative z-10 max-h-[90vh] w-full max-w-2xl overflow-hidden rounded-2xl bg-surface shadow-2xl ${
+          isClosing ? "certificate-modal-dialog-closing" : ""
+        }`}
+        onClick={(event) => event.stopPropagation()}
+      >
         <div className="max-h-[85vh] overflow-y-auto p-8 sm:p-10">
           <button 
-            className="absolute right-6 top-6 flex h-8 w-8 items-center justify-center rounded-full bg-canvas text-ink-secondary hover:bg-black/5 hover:text-ink transition-colors"
-            onClick={handleClose}
-            aria-label="Close modal"
+            ref={closeButtonRef}
+            type="button"
+            className="absolute right-6 top-6 flex min-h-11 min-w-11 items-center justify-center rounded-full bg-canvas text-ink-secondary transition-colors hover:bg-black/5 hover:text-ink"
+            onClick={requestClose}
+            aria-label="Close certificate details"
           >
             &times;
           </button>
           
           <div className="mb-6 flex items-center gap-2 font-mono text-sm tracking-wider uppercase text-ink">
-            <Image
-              src={ certificate.logoUrl || `https://placehold.co/40x40/e5e7eb/6b7280?text=${encodeURIComponent(certificate.issuer.charAt(0))}`}
-              alt={`${certificate.issuer} logo`}
-              className="w-6 h-6 rounded-sm object-contain"
-              width={24}
-              height={24}
-            />
+            {certificate.logoUrl ? (
+              <Image src={certificate.logoUrl} alt={`${certificate.issuer} logo`} className="h-6 w-6 rounded-sm object-contain" width={24} height={24} />
+            ) : (
+              <span aria-hidden="true" className="flex h-6 w-6 items-center justify-center rounded-sm bg-canvas text-xs">
+                {certificate.issuer.charAt(0)}
+              </span>
+            )}
             <span className="text-border-subtle font-sans font-light">|</span>
             <span className="font-semibold text-ink">{certificate.issuer}</span>
           </div>
           
-          <h2 className="mb-2 text-2xl font-bold leading-tight text-ink sm:text-3xl">
+          <h2 id="certificate-dialog-title" className="mb-2 text-2xl font-bold leading-tight text-ink sm:text-3xl">
             {certificate.title}
           </h2>
           
@@ -108,8 +157,8 @@ export default function CertificateModal({
                         </div>
                       )}
                       <div>
-                        <h4 className="font-medium text-ink group-hover:underline line-clamp-1">{item.title}</h4>
-                        <p className="text-sm text-ink-secondary line-clamp-2">{item.description}</p>
+                        <h4 className="font-medium text-ink group-hover:underline">{item.title}</h4>
+                        <p className="line-clamp-2 text-sm text-ink-secondary">{item.description}</p>
                       </div>
                       <div className="ml-auto pl-2 text-ink-muted group-hover:text-ink transition-colors">
                         <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -126,6 +175,53 @@ export default function CertificateModal({
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .certificate-modal-backdrop {
+          background: rgb(0 0 0 / 50%);
+          animation: certificate-modal-fade-in 180ms ease-out both;
+        }
+
+        .certificate-modal-dialog {
+          animation: certificate-modal-scale-in 180ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+        }
+
+        .certificate-modal-backdrop-closing {
+          animation: certificate-modal-fade-out 180ms ease-in both;
+        }
+
+        .certificate-modal-dialog-closing {
+          animation: certificate-modal-scale-out 180ms ease-in both;
+        }
+
+        @keyframes certificate-modal-fade-in {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+        @keyframes certificate-modal-fade-out {
+          from { opacity: 1; }
+          to { opacity: 0; }
+        }
+
+        @keyframes certificate-modal-scale-in {
+          from { opacity: 0; transform: translateY(8px) scale(0.98); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes certificate-modal-scale-out {
+          from { opacity: 1; transform: translateY(0) scale(1); }
+          to { opacity: 0; transform: translateY(8px) scale(0.98); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .certificate-modal-backdrop,
+          .certificate-modal-dialog,
+          .certificate-modal-backdrop-closing,
+          .certificate-modal-dialog-closing {
+            animation-duration: 1ms;
+          }
+        }
+      `}</style>
     </div>
   );
 }

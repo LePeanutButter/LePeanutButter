@@ -2,8 +2,11 @@ import crehanaLogo from '@logos/crehana.webp';
 import oxfordLogo from '@logos/oxford-placement.webp';
 import toeflLogo from '@logos/toefl-junior.webp';
 import sprachLogo from '@logos/sprach-institut.webp';
+import andesLogo from '@logos/andes.webp';
+import santanderLogo from '@logos/santander.webp';
 import eciLogo from '@logos/eci.webp';
 import orbidiLogo from '@logos/orbidi.webp';
+import bavvLogo from '@logos/bavv.webp';
 import { AssetRegistry, RegistryEntry } from './genericRegistry';
 
 /**
@@ -14,8 +17,11 @@ export enum CompanyId {
   OXFORD = 'oxford',
   TOEFL = 'toefl',
   SPRACH = 'sprach',
+  ANDES = 'andes',
+  SANTANDER = 'santander',
   ECI = 'eci',
   ORBIDI = 'orbidi',
+  BAVV = 'bavv'
 }
 
 export type CompanyInfo = RegistryEntry<'logo'>;
@@ -40,6 +46,14 @@ export const CompanyRegistry = {
     name: 'Sprach Institut',
     logo: sprachLogo,
   },
+  [CompanyId.ANDES]: {
+    name: 'Universidad de los Andes',
+    logo: andesLogo,
+  },
+  [CompanyId.SANTANDER]: {
+    name: 'Santander Open Academy',
+    logo: santanderLogo,
+  },
   [CompanyId.ECI]: {
     name: 'Escuela Colombiana de Ingenieria Julio Garavito',
     logo: eciLogo,
@@ -47,5 +61,9 @@ export const CompanyRegistry = {
   [CompanyId.ORBIDI]: {
     name: 'ORBIDI',
     logo: orbidiLogo,
+  },
+  [CompanyId.BAVV]: {
+    name: 'Banco AV Villas',
+    logo: bavvLogo,
   },
 } satisfies AssetRegistry<'logo', CompanyId>;

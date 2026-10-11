@@ -1,13 +1,17 @@
+"use client";
+
 import { skillGroups } from "@/src/data/portfolio";
 import Image from 'next/image';
 import SectionHeading from "@/src/components/ui/SectionHeading";
+import { usePreferences } from "@/src/context/PreferencesContext";
 
 export default function Skills() {
+  const { t } = usePreferences();
   return (
     <section className="mx-auto max-w-content px-6 py-20 sm:px-8">
       <SectionHeading
-        eyebrow="Capabilities"
-        title="Technical Skills"
+        eyebrow={t("skills.eyebrow")}
+        title={t("skills.title")}
       />
       <div className="mt-12 space-y-12 overflow-hidden">
         {skillGroups.map((group, index) => {

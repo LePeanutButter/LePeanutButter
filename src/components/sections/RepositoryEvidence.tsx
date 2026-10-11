@@ -3,6 +3,7 @@
 import { useState } from "react";
 import SectionHeading from "@/src/components/ui/SectionHeading";
 import { auxiliaryRepositories } from "@/src/data/portfolio";
+import { usePreferences } from "@/src/context/PreferencesContext";
 
 const INITIAL_REPOSITORY_LIMIT = 4;
 
@@ -21,6 +22,7 @@ const getActionLabel = (title: string) => {
 
 export default function RepositoryEvidence() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { t } = usePreferences();
   const hasMoreRepositories =
     auxiliaryRepositories.length > INITIAL_REPOSITORY_LIMIT;
   const visibleRepositories = isExpanded
@@ -31,8 +33,8 @@ export default function RepositoryEvidence() {
   return (
     <section className="mx-auto max-w-content px-6 py-20 sm:px-8">
       <SectionHeading
-        eyebrow="Specialized repositories"
-        title="Auxiliary Technical Evidence"
+        eyebrow={t("repositories.eyebrow")}
+        title={t("repositories.title")}
       />
       <div className="mt-12 grid gap-5 md:grid-cols-2">
         {visibleRepositories.map((repository) => (
@@ -77,8 +79,8 @@ export default function RepositoryEvidence() {
           >
             <span>
               {isExpanded
-                ? "Show fewer repositories"
-                : `Show ${hiddenCount} more repositories`}
+                ? t("repositories.fewer")
+                : `${t("repositories.more")} (${hiddenCount})`}
             </span>
             <span aria-hidden="true">{isExpanded ? "^" : "v"}</span>
           </button>

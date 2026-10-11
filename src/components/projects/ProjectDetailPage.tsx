@@ -2,14 +2,14 @@ import type { ProjectCase } from "@/src/types";
 import ProjectBackLink from "./shared/ProjectBackLink";
 import ProjectRepositoriesBlock from "./shared/ProjectRepositoriesBlock";
 import { projectUi } from "./shared/projectUi";
-import { getProjectView } from "./registry";
+import { projectViewRegistry } from "./registry";
 
 interface ProjectDetailPageProps {
   project: ProjectCase;
 }
 
 export default function ProjectDetailPage({ project }: ProjectDetailPageProps) {
-  const CustomView = getProjectView(project.slug);
+  const CustomView = projectViewRegistry[project.slug];
 
   if (CustomView) {
     return (

@@ -49,6 +49,7 @@ import flywayLogo from "@/public/skills/flyway.svg";
 import sqlLogo from "@/public/skills/sql.svg";
 import mysqlLogo from "@/public/skills/my-sql.svg";
 import mariadbLogo from "@/public/skills/mariadb.svg";
+import microsoftAccessLogo from "@/public/skills/microsoft-access.svg";
 
 // AI & Automation
 import n8nLogo from "@/public/skills/n8n.svg";
@@ -56,6 +57,12 @@ import langchainLogo from "@/public/skills/langchain.svg";
 import pythonLogo from "@/public/skills/python.svg";
 import automationAnywhereLogo from "@/public/skills/automation-anywhere.svg";
 import appianLogo from "@/public/skills/appian.svg";
+import knimeLogo from "@/public/skills/knime.svg";
+
+// Productivity
+import wordLogo from "@/public/skills/microsoft-word.svg";
+import excelLogo from "@/public/skills/microsoft-excel.svg";
+import powerPointLogo from "@/public/skills/microsoft-powerpoint.svg";
 
 export const skillGroups: SkillGroup[] = [
 {
@@ -118,6 +125,7 @@ export const skillGroups: SkillGroup[] = [
       { name: "MySQL", image: mysqlLogo },
       { name: "MariaDB", image: mariadbLogo },
       { name: "Flyway", image: flywayLogo },
+      { name: "Microsoft Access", image: microsoftAccessLogo },
     ],
   },
 {
@@ -129,6 +137,16 @@ export const skillGroups: SkillGroup[] = [
       { name: "Automation Anywhere", image: automationAnywhereLogo },
       { name: "Appian", image: appianLogo },
       { name: "LangChain", image: langchainLogo },
+      { name: "Knime", image: knimeLogo },
+    ],
+  },
+  {
+    domain: "productivity",
+    title: "Productivity: Office & Documentation Systems",
+    items: [
+      { name: "Microsoft Word", image: wordLogo },
+      { name: "Microsoft Excel", image: excelLogo },
+      { name: "Microsoft PowerPoint", image: powerPointLogo },
     ],
   },
 ];

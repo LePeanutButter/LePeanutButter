@@ -2,10 +2,10 @@ import type { ContactLink } from "@/src/types";
 
 export const siteConfig = {
   name: "Santiago Botero Garcia",
-  handle: "santiago.dev",
-  title: "Santiago Botero Garcia | Engineering Modern Digital Systems | Software Architecture | Full-Stack & Cloud Development",
+  handle: "santiago.botero",
+  title: "Santiago Botero Garcia | IT Governance, Security, Architecture & Digital Transformation",
   description:
-    "Systems Engineering student building scalable, human-centered digital platforms across full-stack development, cloud, AI automation, and software architecture.",
+    "Systems Engineering student focused on IT governance, information security, technology risk, enterprise architecture, infrastructure, and digital transformation.",
   url: "https://github.com/LePeanutButter",
 } as const;
 

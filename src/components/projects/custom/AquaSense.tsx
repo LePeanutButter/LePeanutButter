@@ -2,7 +2,7 @@
 import type { ReactNode } from "react";
 import { projectUi } from "@/src/components/projects/shared/projectUi";
 import type { ProjectViewProps, Contributor } from "@/src/types/projectViews";
-import { mediaUrl } from "@/src/lib/assets";
+import { assetUrl, mediaUrl } from "@/src/lib/assets";
 
 const collaborators: Contributor[] = [
   { name: "Santiago Botero Garcia", role: "Core Developer", href: "https://github.com/LePeanutButter", avatarSrc: "https://github.com/LePeanutButter.png" },
@@ -58,7 +58,7 @@ function Panel({
     );
 }
 
-export default function AquaSense({ project }: ProjectViewProps) {
+export default function AquaSense({}: ProjectViewProps) {
     return (
         <div className="bg-white text-slate-800 min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto rounded-lg">
             
@@ -95,7 +95,7 @@ export default function AquaSense({ project }: ProjectViewProps) {
                     </div>
                     <div className="w-full sm:w-auto flex justify-end shrink-0">
                         <a
-                            href="/LePeanutButter/projects/sustainable-water-awareness"
+                            href={assetUrl("/projects/sustainable-water-awareness")}
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs font-bold text-[#1e3a8a] bg-white border border-blue-200 hover:border-[#1e3a8a] rounded-lg px-4 py-2.5 transition shadow-2xs hover:bg-blue-50"
                         >
                             View Initiative 💧
