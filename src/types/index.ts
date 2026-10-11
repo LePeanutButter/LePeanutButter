@@ -16,7 +16,8 @@ export type SkillDomain =
   | "os-scripts"
   | "architecture"
   | "languages"
-  | "certifications";
+  | "certifications"
+  | "productivity";
 
 export interface ContactLink {
   label: string;

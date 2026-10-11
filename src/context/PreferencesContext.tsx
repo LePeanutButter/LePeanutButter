@@ -55,7 +55,7 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.summary":
       "Estructuro capacidades, riesgos y decisiones para construir tecnología confiable y alineada al negocio.",
     "hero.network": "Conectar y hacer networking",
-    "hero.explore": "Explorar mi trabajo",
+    "hero.experience": "Ver mi experiencia profesional",
     "showcase.eyebrow": "Cómo trabajo",
     "projects.eyebrow": "Trabajo seleccionado",
     "projects.title": "Proyectos destacados",
@@ -109,7 +109,7 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.summary":
       "I structure capabilities, risks, and decisions to build reliable technology aligned with business needs.",
     "hero.network": "Connect and network",
-    "hero.explore": "Explore my work",
+    "hero.experience": "View my professional experience",
     "showcase.eyebrow": "How I work",
     "projects.eyebrow": "Selected work",
     "projects.title": "Featured Projects",
@@ -163,7 +163,7 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.summary":
       "Ich strukturiere Fähigkeiten, Risiken und Entscheidungen für zuverlässige und geschäftsorientierte Technologie.",
     "hero.network": "Vernetzen",
-    "hero.explore": "Meine Arbeit entdecken",
+    "hero.experience": "Meine Berufserfahrung ansehen",
     "showcase.eyebrow": "Meine Arbeitsweise",
     "projects.eyebrow": "Ausgewählte Arbeiten",
     "projects.title": "Ausgewählte Projekte",

@@ -5,7 +5,7 @@ interface SectionHeadingProps {
 
 export default function SectionHeading({ eyebrow, title }: SectionHeadingProps) {
   return (
-    <div>
+    <div className="section-heading">
       {eyebrow ? (
         <p className="font-mono text-xs uppercase tracking-[0.14em] text-ink-muted">
           {eyebrow}

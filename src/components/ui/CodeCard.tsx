@@ -78,9 +78,10 @@ function ActivityBar() {
 
 export default function CodeCard({ filename = "main.tf" }: CodeCardProps) {
   return (
-    <div className="code-card overflow-hidden rounded-2xl border border-[#c9c9c9] bg-[#f3f3f3] text-[#1f1f1f] shadow-2xl transition-transform duration-500 ease-premium hover:-translate-y-1">
+    <div className="code-card-perspective">
+      <div className="code-card overflow-hidden rounded-2xl border border-[#c9c9c9] bg-[#f3f3f3] text-[#1f1f1f] shadow-2xl">
       <div className="flex h-12 items-center border-b border-[#d4d4d4] bg-[#e8e8e8] px-4">
-        <div className="flex gap-2" aria-hidden="true">
+        <div className="mac-window-controls flex gap-2" aria-hidden="true">
           <span className="size-3 rounded-full bg-[#ff5f57]" />
           <span className="size-3 rounded-full bg-[#febc2e]" />
           <span className="size-3 rounded-full bg-[#28c840]" />
@@ -211,6 +212,7 @@ export default function CodeCard({ filename = "main.tf" }: CodeCardProps) {
           <span>Terraform</span>
           <span className="hidden sm:inline">Prettier</span>
         </div>
+      </div>
       </div>
     </div>
   );

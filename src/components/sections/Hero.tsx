@@ -26,9 +26,9 @@ export default function Hero() {
           </a>
           <a
             className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-ink transition-all duration-500 ease-premium hover:translate-x-1 hover:opacity-60"
-            href="#projects"
+            href="#about"
           >
-            {t("hero.explore")} <span aria-hidden="true">-&gt;</span>
+            {t("hero.experience")} <span aria-hidden="true">-&gt;</span>
           </a>
         </div>
       </div>

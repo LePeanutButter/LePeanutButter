@@ -55,6 +55,13 @@ const config = {
       },
       transitionTimingFunction: {
         premium: "cubic-bezier(0.16, 1, 0.3, 1)",
+        apple: "cubic-bezier(0.25, 1, 0.5, 1)",
+        "apple-emphasized": "cubic-bezier(0.16, 1, 0.3, 1)",
+      },
+      transitionDuration: {
+        220: "220ms",
+        420: "420ms",
+        700: "700ms",
       },
       keyframes: {
         "fade-in-up": {
