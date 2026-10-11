@@ -33,6 +33,8 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.projects": "Proyectos",
     "nav.about": "Sobre mí",
     "nav.contact": "Contacto",
+    "nav.focus": "Enfoque",
+    "header.focus": " Gobierno de TI | Arquitectura Empresarial | 	Transformación Digital",
     "nav.open": "Abrir menú de navegación",
     "nav.close": "Cerrar menú de navegación",
     "preferences.label": "Preferencias de accesibilidad y apariencia",
@@ -49,9 +51,11 @@ const translations: Record<Language, Record<string, string>> = {
     "accessibility.skip": "Saltar al contenido principal",
     "hero.connect": "Conectar en LinkedIn",
     "hero.projects": "Ver proyectos seleccionados",
-    "hero.headline": "Creo sistemas escalables con interfaces digitales refinadas.",
+    "hero.headline": "Gobierno y arquitectura para decisiones tecnológicas claras.",
     "hero.summary":
-      "Estudiante de Ingeniería de Sistemas y desarrollador full-stack enfocado en arquitectura backend, modelado de datos, entrega en la nube, automatización, flujos con IA e interfaces centradas en las personas.",
+      "Estructuro capacidades, riesgos y decisiones para construir tecnología confiable y alineada al negocio.",
+    "hero.network": "Conectar y hacer networking",
+    "hero.explore": "Explorar mi trabajo",
     "showcase.eyebrow": "Cómo trabajo",
     "projects.eyebrow": "Trabajo seleccionado",
     "projects.title": "Proyectos destacados",
@@ -62,6 +66,7 @@ const translations: Record<Language, Record<string, string>> = {
     "experience.eyebrow": "Trayectoria profesional",
     "experience.title": "Experiencia",
     "experience.achievements": "Logros clave",
+    "experience.current": "Rol actual",
     "education.eyebrow": "Base académica",
     "education.title": "Educación",
     "skills.eyebrow": "Capacidades",
@@ -70,17 +75,20 @@ const translations: Record<Language, Record<string, string>> = {
     "repositories.title": "Evidencia técnica adicional",
     "repositories.more": "Mostrar más repositorios",
     "repositories.fewer": "Mostrar menos repositorios",
-    "cta.eyebrow": "¿Qué sigue?",
-    "cta.title": "Trabajemos juntos",
+    "cta.eyebrow": "Conectemos",
+    "cta.title": "Conversaciones que conectan tecnología y propósito",
     "cta.body":
-      "Estoy disponible para nuevas oportunidades, proyectos freelance y colaboraciones. Si tienes una pregunta o simplemente quieres saludar, mi bandeja de entrada está abierta.",
-    "cta.contact": "Contáctame",
-    "footer.built": "Construido con pensamiento sistémico y consciente.",
+      "Me interesa conectar con profesionales y equipos que trabajen en gobierno de TI, arquitectura, seguridad, infraestructura, transformación digital y gestión tecnológica. Si compartimos intereses, conversemos.",
+    "cta.contact": "Conectar en LinkedIn",
+    "cta.secondary": "Conocer mi trayectoria",
+    "footer.built": "Gobierno, arquitectura y tecnología con propósito.",
   },
   en: {
     "nav.projects": "Projects",
     "nav.about": "About",
     "nav.contact": "Contact",
+    "nav.focus": "Focus",
+    "header.focus": "IT Governance | Enterprise Architecture | Digital Transformation",
     "nav.open": "Open navigation menu",
     "nav.close": "Close navigation menu",
     "preferences.label": "Accessibility and appearance preferences",
@@ -97,9 +105,11 @@ const translations: Record<Language, Record<string, string>> = {
     "accessibility.skip": "Skip to main content",
     "hero.connect": "Connect on LinkedIn",
     "hero.projects": "View selected projects",
-    "hero.headline": "I build scalable systems with refined digital interfaces.",
+    "hero.headline": "Governance and architecture for clear technology decisions.",
     "hero.summary":
-      "Systems Engineering student and full-stack technologist focused on backend architecture, database modeling, cloud delivery, automation, AI-enabled workflows, and user-centered front-end implementation.",
+      "I structure capabilities, risks, and decisions to build reliable technology aligned with business needs.",
+    "hero.network": "Connect and network",
+    "hero.explore": "Explore my work",
     "showcase.eyebrow": "How I work",
     "projects.eyebrow": "Selected work",
     "projects.title": "Featured Projects",
@@ -110,6 +120,7 @@ const translations: Record<Language, Record<string, string>> = {
     "experience.eyebrow": "Professional timeline",
     "experience.title": "Experience",
     "experience.achievements": "Key Achievements",
+    "experience.current": "Current role",
     "education.eyebrow": "Academic base",
     "education.title": "Education",
     "skills.eyebrow": "Capabilities",
@@ -118,17 +129,20 @@ const translations: Record<Language, Record<string, string>> = {
     "repositories.title": "Auxiliary Technical Evidence",
     "repositories.more": "Show more repositories",
     "repositories.fewer": "Show fewer repositories",
-    "cta.eyebrow": "What's Next?",
-    "cta.title": "Let's Work Together",
+    "cta.eyebrow": "Let's connect",
+    "cta.title": "Conversations that connect technology and purpose",
     "cta.body":
-      "I am currently open to new opportunities, freelance projects, and exciting collaborations. Whether you have a question or just want to say hi, my inbox is always open.",
-    "cta.contact": "Contact Me",
-    "footer.built": "Built with restrained systems thinking.",
+      "I enjoy connecting with professionals and teams working across IT governance, architecture, security, infrastructure, digital transformation, and technology management. If our interests overlap, let's talk.",
+    "cta.contact": "Connect on LinkedIn",
+    "cta.secondary": "Explore my background",
+    "footer.built": "Governance, architecture, and technology with purpose.",
   },
   de: {
     "nav.projects": "Projekte",
     "nav.about": "Über mich",
     "nav.contact": "Kontakt",
+    "nav.focus": "Fokus",
+    "header.focus": "IT-Governance | Unternehmensarchitektur | Digitale Transformation",
     "nav.open": "Navigationsmenü öffnen",
     "nav.close": "Navigationsmenü schließen",
     "preferences.label": "Einstellungen für Barrierefreiheit und Darstellung",
@@ -145,9 +159,11 @@ const translations: Record<Language, Record<string, string>> = {
     "accessibility.skip": "Zum Hauptinhalt springen",
     "hero.connect": "Auf LinkedIn verbinden",
     "hero.projects": "Ausgewählte Projekte ansehen",
-    "hero.headline": "Ich entwickle skalierbare Systeme mit klaren digitalen Schnittstellen.",
+    "hero.headline": "Governance und Architektur für klare Technologieentscheidungen.",
     "hero.summary":
-      "Student der Systemtechnik und Full-Stack-Entwickler mit Fokus auf Backend-Architektur, Datenmodellierung, Cloud-Bereitstellung, Automatisierung, KI-gestützten Workflows und nutzerzentrierter Frontend-Entwicklung.",
+      "Ich strukturiere Fähigkeiten, Risiken und Entscheidungen für zuverlässige und geschäftsorientierte Technologie.",
+    "hero.network": "Vernetzen",
+    "hero.explore": "Meine Arbeit entdecken",
     "showcase.eyebrow": "Meine Arbeitsweise",
     "projects.eyebrow": "Ausgewählte Arbeiten",
     "projects.title": "Ausgewählte Projekte",
@@ -158,6 +174,7 @@ const translations: Record<Language, Record<string, string>> = {
     "experience.eyebrow": "Beruflicher Werdegang",
     "experience.title": "Erfahrung",
     "experience.achievements": "Wichtige Erfolge",
+    "experience.current": "Aktuelle Position",
     "education.eyebrow": "Akademische Grundlage",
     "education.title": "Ausbildung",
     "skills.eyebrow": "Fähigkeiten",
@@ -166,42 +183,44 @@ const translations: Record<Language, Record<string, string>> = {
     "repositories.title": "Zusätzliche technische Nachweise",
     "repositories.more": "Weitere Repositories anzeigen",
     "repositories.fewer": "Weniger Repositories anzeigen",
-    "cta.eyebrow": "Wie geht es weiter?",
-    "cta.title": "Lass uns zusammenarbeiten",
+    "cta.eyebrow": "Vernetzen wir uns",
+    "cta.title": "Gespräche, die Technologie und Zweck verbinden",
     "cta.body":
-      "Ich bin offen für neue Möglichkeiten, Freelance-Projekte und spannende Kooperationen. Wenn du eine Frage hast oder einfach Hallo sagen möchtest, ist mein Posteingang offen.",
-    "cta.contact": "Kontakt aufnehmen",
-    "footer.built": "Mit bewusstem Systemdenken entwickelt.",
+      "Ich vernetze mich gerne mit Fachleuten und Teams aus IT-Governance, Architektur, Sicherheit, Infrastruktur, digitaler Transformation und Technologiemanagement. Wenn unsere Interessen zusammenpassen, lass uns sprechen.",
+    "cta.contact": "Auf LinkedIn vernetzen",
+    "cta.secondary": "Meinen Werdegang ansehen",
+    "footer.built": "Governance, Architektur und Technologie mit Sinn.",
   },
 };
 
-const getInitialLanguage = (): Language => {
-  if (typeof window === "undefined") return "en";
-  const saved = window.localStorage.getItem("site-language");
-  if (saved === "es" || saved === "en" || saved === "de") return saved;
-  return navigator.language.toLowerCase().startsWith("es")
-    ? "es"
-    : navigator.language.toLowerCase().startsWith("de")
-      ? "de"
-      : "en";
-};
-
 export function PreferencesProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
-  const [theme, setThemeState] = useState<Theme>(() =>
-    typeof window !== "undefined" && window.localStorage.getItem("site-theme") === "dark"
-      ? "dark"
-      : "light",
-  );
-  const [highContrast, setHighContrastState] = useState(
-    () => typeof window !== "undefined" && window.localStorage.getItem("site-contrast") === "true",
-  );
-  const [largeText, setLargeTextState] = useState(
-    () => typeof window !== "undefined" && window.localStorage.getItem("site-large-text") === "true",
-  );
-  const [reducedMotion, setReducedMotionState] = useState(
-    () => typeof window !== "undefined" && window.localStorage.getItem("site-reduced-motion") === "true",
-  );
+  const [language, setLanguageState] = useState<Language>("en");
+  const [theme, setThemeState] = useState<Theme>("light");
+  const [highContrast, setHighContrastState] = useState(false);
+  const [largeText, setLargeTextState] = useState(false);
+  const [reducedMotion, setReducedMotionState] = useState(false);
+
+  useEffect(() => {
+    const savedLanguage = window.localStorage.getItem("site-language");
+    const browserLanguage = navigator.language.toLowerCase();
+    const nextLanguage: Language =
+      savedLanguage === "es" || savedLanguage === "en" || savedLanguage === "de"
+        ? savedLanguage
+        : browserLanguage.startsWith("es")
+          ? "es"
+          : browserLanguage.startsWith("de")
+            ? "de"
+            : "en";
+    const frame = window.requestAnimationFrame(() => {
+      setLanguageState(nextLanguage);
+      setThemeState(window.localStorage.getItem("site-theme") === "dark" ? "dark" : "light");
+      setHighContrastState(window.localStorage.getItem("site-contrast") === "true");
+      setLargeTextState(window.localStorage.getItem("site-large-text") === "true");
+      setReducedMotionState(window.localStorage.getItem("site-reduced-motion") === "true");
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = language;

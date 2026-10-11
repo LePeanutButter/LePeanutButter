@@ -20,6 +20,12 @@ export default function CTA() {
         >
           {t("cta.contact")}
         </a>
+        <a
+          href="#about"
+          className="flex h-12 min-w-[180px] items-center justify-center rounded-control border border-border-subtle px-8 text-sm font-semibold text-ink transition-colors hover:bg-canvas"
+        >
+          {t("cta.secondary")}
+        </a>
       </div>
     </section>
   );

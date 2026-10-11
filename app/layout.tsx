@@ -3,16 +3,16 @@ import "./globals.css";
 import { PreferencesProvider } from "@/src/context/PreferencesContext";
 
 export const metadata: Metadata = {
-  title: "Santiago Botero Garcia | Engineering Modern Digital Systems | Software Architecture | Full-Stack & Cloud Development",
+  title: "Santiago Botero Garcia | IT Governance, Security, Architecture & Digital Transformation",
   description:
-    "Portfolio of Santiago Botero Garcia, a Systems Engineering student focused on full-stack development, cloud architecture, AI automation, and human-centered software.",
+    "Portfolio of Santiago Botero Garcia, a Systems Engineering student focused on IT governance, information security, technology risk, architecture, infrastructure, and digital transformation.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Santiago Botero Garcia | Engineering Modern Digital Systems",
+    title: "Santiago Botero Garcia | IT Governance, Security & Architecture",
     description:
-      "Portfolio of Santiago Botero Garcia, focused on software architecture, cloud delivery, automation, and human-centered software.",
+      "Portfolio focused on IT governance, information security, technology risk, architecture, infrastructure, and digital transformation.",
     type: "website",
   },
 };

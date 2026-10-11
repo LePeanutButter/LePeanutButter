@@ -6,6 +6,7 @@ import andesLogo from '@logos/andes.webp';
 import santanderLogo from '@logos/santander.webp';
 import eciLogo from '@logos/eci.webp';
 import orbidiLogo from '@logos/orbidi.webp';
+import bavvLogo from '@logos/bavv.webp';
 import { AssetRegistry, RegistryEntry } from './genericRegistry';
 
 /**
@@ -20,6 +21,7 @@ export enum CompanyId {
   SANTANDER = 'santander',
   ECI = 'eci',
   ORBIDI = 'orbidi',
+  BAVV = 'bavv'
 }
 
 export type CompanyInfo = RegistryEntry<'logo'>;
@@ -59,5 +61,9 @@ export const CompanyRegistry = {
   [CompanyId.ORBIDI]: {
     name: 'ORBIDI',
     logo: orbidiLogo,
+  },
+  [CompanyId.BAVV]: {
+    name: 'Banco AV Villas',
+    logo: bavvLogo,
   },
 } satisfies AssetRegistry<'logo', CompanyId>;

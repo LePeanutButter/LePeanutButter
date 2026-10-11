@@ -12,6 +12,7 @@ export default function Header() {
   const navigationItems = [
     { label: t("nav.projects"), href: "#projects" },
     { label: t("nav.about"), href: "#about" },
+    { label: t("nav.focus"), href: "#focus" },
     { label: t("nav.contact"), href: "#contact" },
   ];
 
@@ -32,11 +33,13 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border-subtle bg-surface/70 backdrop-blur-xl">
       <nav className="mx-auto flex h-20 max-w-content items-center justify-between px-6 sm:px-8">
-        <Link
-          className="font-sans text-base font-extrabold tracking-[-0.04em] text-ink transition-opacity duration-500 ease-premium hover:opacity-60"
-          href="/"
-        >
-          {siteConfig.handle}
+        <Link className="group flex flex-col" href="/">
+          <span className="font-sans text-base font-extrabold tracking-[-0.04em] text-ink transition-opacity duration-500 ease-premium group-hover:opacity-60">
+            {siteConfig.handle}
+          </span>
+          <span className="hidden text-[10px] font-medium uppercase tracking-[0.12em] text-ink-muted lg:block">
+            {t("header.focus")}
+          </span>
         </Link>
         <ul className="hidden items-center gap-8 md:flex">
           {navigationItems.map((item) => (

@@ -22,13 +22,13 @@ export default function Hero() {
             className="inline-flex min-h-11 items-center justify-center rounded-full border border-ink bg-ink px-7 text-sm font-medium text-canvas shadow-[0_12px_28px_rgba(17,17,17,0.18)] transition-all duration-500 ease-premium hover:-translate-y-0.5 hover:bg-transparent hover:text-ink"
             href="https://linkedin.com/in/santiago-botero-garcia-86991335b/"
           >
-            {t("hero.connect")}
+            {t("hero.network")}
           </a>
           <a
             className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-ink transition-all duration-500 ease-premium hover:translate-x-1 hover:opacity-60"
             href="#projects"
           >
-            {t("hero.projects")} <span aria-hidden="true">-&gt;</span>
+            {t("hero.explore")} <span aria-hidden="true">-&gt;</span>
           </a>
         </div>
       </div>
